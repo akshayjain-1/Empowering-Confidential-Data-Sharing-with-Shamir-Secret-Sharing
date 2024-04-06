@@ -2,8 +2,8 @@ import filecmp
 
 import download
 # path of this script
-dir1 = "/home/akshay/Desktop/Data app/New/"
-dir2 = "/home/akshay/Desktop/Data app/Download/"
+dir1 = "<path to where the original file was stored>"
+dir2 = "<path to where the file downlaoded from cloud is stored>"
 
 # get fileNames from user
 f = input("\nEnter the file to be checked for modifications: ")
