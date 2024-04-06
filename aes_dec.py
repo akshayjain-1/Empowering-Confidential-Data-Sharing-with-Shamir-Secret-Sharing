@@ -3,13 +3,12 @@ from Cryptodome.Cipher import AES
 from Cryptodome.Random import get_random_bytes
 import os,binascii
 import pickle
-
 import download
+
 # Decryption step
 # The receiver code begins here
-#Store data to a file
-# path of this script
-directory = "/home/akshay/Desktop/Data app/Download/"
+# Store data to a file
+directory = "/home/user/path of this script" # Update the code to reflect path of this script
 
 # get fileName from user
 filepath = directory + input("Enter filename to read: ")
@@ -17,13 +16,13 @@ filepath = directory + input("Enter filename to read: ")
 # Reads the file
 received_msg = pickle.load(open(filepath, 'rb'))
 
-#Breaking down received message
+# Breaking down received message
 received_ciphertext, received_tag, received_nonce, received_kdf_salt = received_msg
 
 # Generate decryption key from passphrase and salt
 decryption_passphrase = input("Enter decryption passphrase: ")
 decryption_key = PBKDF2(decryption_passphrase, received_kdf_salt)
-#print ("Decryption Key: " + str(decryption_key))
+# print ("Decryption Key: " + str(decryption_key))
 
 # Validate MAC and decrypt
 # If MAC validation fails, ValueError exception will be thrown
