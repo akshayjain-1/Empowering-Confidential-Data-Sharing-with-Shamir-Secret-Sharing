@@ -4,7 +4,7 @@ from Cryptodome.Random import get_random_bytes
 import os,binascii
 import pickle
 
-directory = "/home/akshay/Desktop/Data app/New/"
+directory = "<path where the file is stored>"
 
 filepath = directory + input("Enter filename whose password is to be changed: ")
 
