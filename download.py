@@ -9,7 +9,8 @@ from pydrive.drive import GoogleDrive
 gauth = GoogleAuth()           
 drive = GoogleDrive(gauth)
 
-CLIENT_SECRET_FILE= '/home/akshay/Desktop/Data app/client_secrets.json'
+# Generate a client_secret.json file and store it
+CLIENT_SECRET_FILE= '/home/user/path to the json file' # Update the variable to refelct the path of the json file 
 API_NAME= 'drive'
 API_VERSION='v3'
 SCOPES=['https://www.googleapis.com/auth/drive']
@@ -40,7 +41,7 @@ for file_id,file_name in zip(file_ids,file_names):
 
     fh.seek(0)
 
-    with open(os.path.join('/home/akshay/Desktop/Data app/Download/',file_name),'wb') as f:
+    with open(os.path.join('<path to where the file is to be downloaded on local system>',file_name),'wb') as f:
         f.write(fh.read())
         f.close()
 
