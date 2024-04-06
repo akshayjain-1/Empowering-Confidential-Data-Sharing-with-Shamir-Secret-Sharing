@@ -37,9 +37,8 @@ print ("\nSalt: " + str(salt))
 # Message to transmit/share
 transmitted_message = ciphertext, tag, nonce, salt
 
-#Store data to a file
-# path of this script
-directory = "/home/akshay/Desktop/Data app/New/"
+# Store data to a file
+directory = "/home/user/path to this script" # Update variable to reflect path of this script
 
 # get fileName from user
 filepath = directory + input("\nEnter filename to write: ")
