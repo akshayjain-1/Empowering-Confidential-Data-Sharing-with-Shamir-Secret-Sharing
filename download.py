@@ -17,7 +17,7 @@ SCOPES=['https://www.googleapis.com/auth/drive']
 
 service= Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-file_list = drive.ListFile({'q': "'{}' in parents and trashed=false".format('1VPkA0Qf89Rcd-Jf10bwJ3h5fO7755712')}).GetList()
+file_list = drive.ListFile({'q': "'{}' in parents and trashed=false".format('folder id of the drive folder where the file is stored')}).GetList()
 for file in file_list:
 	print('title: %s, id: %s' % (file['title'], file['id']))
 
